@@ -1,0 +1,8 @@
+Simple social media website created in AWS.
+I created a basic VPN with 3 private and 3 public subnets, IGW, NACL, NGW, routing tables etc. I used Terraform to create this so it was an autonymous and repeatable process 
+I created a bastion host on an ec2 instance within the public subnet manually to allow secure(limited) communication between private and public subnets
+I created the backend within the VPN using terraform to create RDS database for images,posts etc, this was created within the private subnet of the VPN to keep it secure. 
+I created front end with terraform linking the backend to the front end and hosting a simple site with a s3 bucket 
+Testing. I chekced that it was all working correctly, i could post images and messages into a bulletin board type system so everything appears to be working
+I have a domain in Route53 so have crerated an alias to the s3 bucket for simplified access. I have added an ssl certificate for good practices.
+Now the site is functional in a simple way i plan to make it more functional.
